@@ -823,6 +823,12 @@ def train(attn_implementation=None):
                 cache_dir=training_args.cache_dir,
                 **bnb_model_from_pretrained_args
             )
+        elif 'stablelm' in model_args.model_name_or_path.lower():
+            model = LlavaStableLMForCausalLM.from_pretrained(
+                model_args.model_name_or_path,
+                cache_dir=training_args.cache_dir,
+                **bnb_model_from_pretrained_args
+            )
         else:
             model = LlavaLlamaForCausalLM.from_pretrained(
                 model_args.model_name_or_path,
