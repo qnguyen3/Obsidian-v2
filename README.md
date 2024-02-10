@@ -1,2 +1,2 @@
-# Obsidian-v2
+# Obsidian v2
 Nous Obsidian v2
